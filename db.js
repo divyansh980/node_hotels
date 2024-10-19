@@ -13,7 +13,10 @@
 //old version it use before 4.0.0 version , now new version use in below...
 
 const mongoose = require('mongoose');
-const uri = 'mongodb://localhost:27017/hostels'; // Replace with your MongoDB URI
+require('dotenv').config();
+
+// const uri = process.env.Local_MONGODB_URL;      // Replace with your MongoDB URI
+const uri = process.env.MONGODB_URL;  
 
 mongoose.connect(uri)
     .then(() => console.log('Connected to MongoDB server'))
