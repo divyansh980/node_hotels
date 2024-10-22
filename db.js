@@ -15,8 +15,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// const uri = process.env.Local_MONGODB_URL;      // Replace with your MongoDB URI
-const uri = process.env.MONGODB_URL;  
+const uri = process.env.Local_MONGODB_URL;      // Replace with your MongoDB URI
+// const uri = process.env.MONGODB_URL;  
 
 mongoose.connect(uri)
     .then(() => console.log('Connected to MongoDB server'))
